@@ -11,6 +11,8 @@ body{
     background-color: #eeeeee;
 }
 
+/* Style da Navbar */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -85,3 +87,54 @@ body{
 .profile{
     width: 40px;
 }
+
+/* Fim do Style da Navbar */
+
+/* Style do Rodapé */
+
+.rodape {
+    background-color: #000;
+    color: white;
+    margin-top: 50px;
+}
+
+.conteudo-rodape {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.rodape-links > a{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-parceiros {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-parceiros > span {
+    font-size: small;
+    width: 20vw;
+}
+
+.logo-parceiros > img {
+    height: 70px;
+}
+
+/* Fim do Style do Rodapé */
