@@ -1,0 +1,1 @@
+const fotos = ["imagem1.png", "imagem2.png", "imagem3.png", "imagem4.png", "imagem5.png", "imagem6.png"];

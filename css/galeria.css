@@ -1,0 +1,86 @@
+body{
+    background-color: antiquewhite;
+}
+
+#imagem-banner {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /*object-position: center;*/
+    display: block;
+}
+
+#banner-carrosel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        rgba(246, 119, 14, 0.90) 100%
+    );
+}
+
+#banner-carrosel {
+    height: clamp(320px, 45.4vw, 400px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffad42;
+}
+
+#midia {
+    padding: 30px 40px 40px;
+}
+
+.quadrado-placeholder {
+    height: 255px;
+    width: 250px;
+    position: relative;
+    border: 2px solid #ffad42;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.quadrado-placeholder p {
+    width: 100%;
+    text-align: center;
+    color: rgb(251, 251, 252);
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    bottom: -5px;
+    z-index: 1;
+}
+
+.quadrado-placeholder img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.quadrado-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        transparent 40px,
+        rgba(236, 113, 25, 0.2) 60%,
+        rgba(238, 112, 18, 0.75) 80%,
+        rgba(246, 119, 14, 0.98) 100%
+    );
+}
+
+#galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*aplicar fonte Inter*/
