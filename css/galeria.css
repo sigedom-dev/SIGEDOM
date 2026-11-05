@@ -28,7 +28,25 @@
 }
 
 #midia {
-    padding: 30px 40px 40px;
+    padding: 30px 20px;
+}
+
+#midia-container h1 {
+    margin: 0 auto 20px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0a4212;
+}
+
+#midia-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .quadrado-placeholder {
@@ -73,10 +91,18 @@
     );
 }
 
-#galeria{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+#botao {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #f9ec9b;
+    color: #0a4212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border: 2px solid #259235;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /*aplicar fonte Inter*/
