@@ -1,1 +1,3 @@
-const fotos = ["Filho de Deus menino meu - Natal 2022.jpg", "ABC.png", "imagem1.png", "imagem2.png", "imagem3.png", "imagem4.png", "imagem5.png", "imagem6.png"];
+const fotos = ["Filho de Deus menino meu - Natal 2022.jpg",
+    "Mostra Internacional de animação.jpg", "Mestre da Cultura, Seu Joaquim.jpg", "Maculelê, Casa de Saberes.jpg", 
+    "Festa da Igreja.jpg", "Curso de Teatro.jpg", "CineClube com Shalom.jpg", "Cia Rastro.jpg"];
