@@ -43,9 +43,10 @@
     margin: 0 auto;
 }
 
-#galeria {
+#galeria{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
