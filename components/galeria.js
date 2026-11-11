@@ -22,7 +22,7 @@ let indiceBanner = 0;
 
 function atualizarBanner() {
     const nomeArquivo = fotos[indiceBanner];
-    imagemBanner.src = "../assets/img/galeria" + encodeURIComponent(nomeArquivo);
+    imagemBanner.src = "../assets/img/galeria/" + encodeURIComponent(nomeArquivo);
     const titulo = nomeArquivo.replace(/\.[^.]+$/, "");
     imagemBanner.alt = titulo;
     tituloBanner.textContent = titulo;
