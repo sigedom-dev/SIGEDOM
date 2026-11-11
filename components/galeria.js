@@ -13,6 +13,7 @@ function criarQuadrado (nomeArquivo) {
 fotos.forEach(criarQuadrado);
 
 const imagemBanner = document.getElementById("imagem-banner");
+const imagemFundo = document.getElementById("imagem-fundo");
 const tituloBanner = document.getElementById("titulo-banner");
 
 const setaAnterior = document.getElementById("seta-anterior");
@@ -24,7 +25,11 @@ function atualizarBanner() {
     const nomeArquivo = fotos[indiceBanner];
     imagemBanner.classList.remove("fade");
     void imagemBanner.offsetWidth;
-    imagemBanner.src = "../assets/img/galeria/" + encodeURIComponent(nomeArquivo);
+
+    const caminhoImagem = "../assets/img/galeria/" + encodeURIComponent(nomeArquivo);
+
+    imagemFundo.src = caminhoImagem;
+    imagemBanner.src = caminhoImagem;
     imagemBanner.classList.add("fade");
     const titulo = nomeArquivo.replace(/\.[^.]+$/, "");
     imagemBanner.alt = titulo;

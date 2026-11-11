@@ -4,6 +4,7 @@
     object-fit: contain;
     display: block;
     opacity: 1;
+    z-index: 1;
 }
 
 #banner-carrosel::after {
@@ -155,6 +156,18 @@
     100% {
         opacity: 1;
     }
+}
+
+#imagem-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    filter: blur(12px);
+
+    transform: scale(1.1);
+    z-index: 0;
 }
 
 /*aplicar fonte Inter*/
