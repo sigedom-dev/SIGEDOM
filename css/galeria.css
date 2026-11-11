@@ -1,8 +1,9 @@
 #imagem-banner {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    opacity: 1;
 }
 
 #banner-carrosel::after {
@@ -140,6 +141,20 @@
     font-family: 'Segoe UI', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
+}
+
+#imagem-banner.fade {
+    animation: fadeBanner 0.4s ease-in-out;
+}
+
+@keyframes fadeBanner {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /*aplicar fonte Inter*/
