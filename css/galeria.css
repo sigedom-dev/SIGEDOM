@@ -2,7 +2,6 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    /*object-position: center;*/
     display: block;
 }
 
@@ -104,6 +103,43 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     cursor: pointer;
+}
+
+.seta-banner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#seta-anterior {
+    left: 25px;
+}
+
+#seta-proxima {
+    right: 25px;
+}
+
+#titulo-banner {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin: 0;
+    max-width: calc(100% - 60px);
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 /*aplicar fonte Inter*/

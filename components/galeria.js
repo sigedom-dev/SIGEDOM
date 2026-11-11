@@ -11,3 +11,34 @@ function criarQuadrado (nomeArquivo) {
 }
 
 fotos.forEach(criarQuadrado);
+
+const imagemBanner = document.getElementById("imagem-banner");
+const tituloBanner = document.getElementById("titulo-banner");
+
+const setaAnterior = document.getElementById("seta-anterior");
+const setaProxima = document.getElementById("seta-proxima");
+
+let indiceBanner = 0;
+
+function atualizarBanner() {
+    const nomeArquivo = fotos[indiceBanner];
+    imagemBanner.src = "../assets/img/galeria" + encodeURIComponent(nomeArquivo);
+    const titulo = nomeArquivo.replace(/\.[^.]+$/, "");
+    imagemBanner.alt = titulo;
+    tituloBanner.textContent = titulo;
+
+}
+
+setaProxima.addEventListener("click", function() {
+    indiceBanner = (indiceBanner + 1) % fotos.length;
+    atualizarBanner();
+});
+
+
+setaAnterior.addEventListener("click", function() {
+    indiceBanner = (indiceBanner - 1 + fotos.length) % fotos.length;
+    atualizarBanner();
+});
+
+
+atualizarBanner();
