@@ -1,4 +1,5 @@
 #imagem-banner {
+    position: relative;
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -7,11 +8,21 @@
     z-index: 1;
 }
 
+#imagem-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(12px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
 #banner-carrosel::after {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 2;
     pointer-events: none;
     background: linear-gradient(
         to bottom,
@@ -123,10 +134,12 @@
 }
 
 #seta-anterior {
+    z-index: 3;
     left: 25px;
 }
 
 #seta-proxima {
+    z-index: 3;
     right: 25px;
 }
 
@@ -149,25 +162,13 @@
 }
 
 @keyframes fadeBanner {
-    0% {
+    from {
         opacity: 0;
     }
 
-    100% {
+    to {
         opacity: 1;
     }
-}
-
-#imagem-fundo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    filter: blur(12px);
-
-    transform: scale(1.1);
-    z-index: 0;
 }
 
 /*aplicar fonte Inter*/
