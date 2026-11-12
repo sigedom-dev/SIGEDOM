@@ -7,7 +7,7 @@ function criarQuadrado(nomeArquivo, caminhoPersonalizado = null) {
     quadrado.className = "quadrado-placeholder";
 
     imagem.src = caminhoPersonalizado ??
-        "pasta-das-fotos/" + encodeURIComponent(nomeArquivo);
+        "../assets/img/galeria/" + encodeURIComponent(nomeArquivo);
 
     titulo.textContent = nomeArquivo.replace(/\.[^.]+$/, "");
 
@@ -19,7 +19,7 @@ fotos.forEach(nomeArquivo => criarQuadrado(nomeArquivo));
 
 const fotosBanner = fotos.map(nomeArquivo => ({
     nome: nomeArquivo,
-    src: "pasta-das-fotos/" + encodeURIComponent(nomeArquivo)
+    src: "../assets/img/galeria/" + encodeURIComponent(nomeArquivo)
 }));
 
 const imagemBanner = document.getElementById("imagem-banner");
