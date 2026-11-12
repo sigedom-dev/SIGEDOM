@@ -43,6 +43,17 @@
     padding: 30px 20px;
 }
 
+#midia-container h1::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 34px;
+    background-color: #0a4212;
+    border-radius: 10px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
 #midia-container h1 {
     margin: 0 auto 20px 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
