@@ -220,7 +220,9 @@ arquivoMidia.addEventListener("change", async () => {
     indiceBanner = fotosBanner.length - 1;
     atualizarBanner();
 
-    if (!foiSalvo) {
+    if (foiSalvo) {
+        mostrarAviso("Sua imagem foi enviada para avaliação!");
+    } else {
         alert(
             "Foto exibida, mas não pôde ser armazenada. " +
             "Ela sumirá quando você atualizar a página."
