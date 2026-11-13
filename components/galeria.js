@@ -32,6 +32,7 @@ const setaProxima = document.getElementById("seta-proxima");
 let indiceBanner = 0;
 
 function atualizarBanner() {
+    if (fotosBanner.length === 0) return;
     const fotoAtual = fotosBanner[indiceBanner];
     const nomeArquivo = fotoAtual.nome;
     imagemBanner.classList.remove("fade");
@@ -48,12 +49,14 @@ function atualizarBanner() {
 }
 
 setaProxima.addEventListener("click", function() {
+    if (fotosBanner.length === 0) return;
     indiceBanner = (indiceBanner + 1) % fotosBanner.length;
     atualizarBanner();
 });
 
 
 setaAnterior.addEventListener("click", function() {
+    if (fotosBanner.length === 0) return;
     indiceBanner = (indiceBanner - 1 + fotosBanner.length) % fotosBanner.length;
     atualizarBanner();
 });
@@ -69,6 +72,24 @@ botaoUpload.addEventListener("click", () => {
     arquivoMidia.click();
 });
 
+// AVISO DE UPLOAD
+
+let temporizadorAviso;
+
+function mostrarAviso(mensagem) {
+    const aviso = document.getElementById("aviso-upload");
+    const textoAviso = document.getElementById("mensagem-aviso");
+
+    textoAviso.textContent = mensagem;
+
+    aviso.classList.add("mostrar");
+
+    clearTimeout(temporizadorAviso);
+
+    temporizadorAviso = setTimeout(() => {
+        aviso.classList.remove("mostrar");
+    }, 3500);
+}
 
 // BANCO DE IMAGENS DO NAVEGADOR
 
@@ -116,7 +137,6 @@ async function salvarFotoNoBanco(arquivo) {
 
     return new Promise((resolve, reject) => {
         const transacao = banco.transaction("imagens", "readwrite");
-
         transacao.objectStore("imagens").add({
             nome: arquivo.name,
             imagem: arquivo
@@ -126,7 +146,6 @@ async function salvarFotoNoBanco(arquivo) {
         transacao.onerror = () => reject(transacao.error);
     });
 }
-
 
 // CRIAR QUADRADINHO E INSERIR NO CARROSSEL
 
@@ -140,7 +159,6 @@ function adicionarFotoNaPagina(nome, arquivo) {
         src: url
     });
 }
-
 
 // RECARREGAR FOTOS SALVAS
 
@@ -159,7 +177,6 @@ async function carregarFotosSalvas() {
 }
 
 const carregamentoInicial = carregarFotosSalvas();
-
 
 // QUANDO O USUÁRIO ESCOLHER UMA IMAGEM
 
