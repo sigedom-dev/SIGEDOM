@@ -30,6 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100vw;
     padding: 10px 2%;
     background-color: #FFCC00;
 }
@@ -109,6 +110,7 @@ body{
     background-color: #000;
     color: white;
     margin-top: 50px;
+    width: 100vw;
 }
 
 .conteudo-rodape {

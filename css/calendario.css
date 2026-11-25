@@ -15,13 +15,31 @@
   box-sizing: border-box; 
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .banner_calendario{
-    height: 20vh;
-    background-color: var(--verde-claro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--verde-claro);
+  color: var(--fundo);
+  font-size: xx-large;
+  width: 100vw;
+  height: 20vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .calendario {
-  max-width: 720px;
+  min-width: 850px;
+  margin-top: 30px;
 }
 
 /* ---------- Cabeçalho ---------- */

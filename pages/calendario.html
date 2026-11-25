@@ -8,22 +8,20 @@
 <body>
     <nav id="navbar"></nav>
     
-    <div class="banner_calendario"></div>
+    <div class="banner_calendario">
+        <h1>CALENDÁRIO</h1>
+    </div>
 
     <section class="calendario" id="calendario">
-
         <header class="calendario_cabecalho">
             <button class="calendario_seta" id="mes-anterior" type="button" aria-label="Mês anterior">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6l-6 6 6 6"/></svg>
             </button>
-
             <h2 class="calendario_titulo" id="titulo-mes" aria-live="polite">Outubro, 2026</h2>
-
             <button class="calendario_seta" id="mes-seguinte" type="button" aria-label="Próximo mês">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg>
             </button>
         </header>
-
         <div class="calendario_grade">
             <div class="calendario_semana">
                 <span>DOM</span>
@@ -34,10 +32,8 @@
                 <span>SEX</span>
                 <span>SÁB</span>
             </div>
-
             <div class="calendario_dias" id="dias"></div>
         </div>
-
     </section>
 
     <script src="../components/calendario.js" defer></script>
