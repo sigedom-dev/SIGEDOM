@@ -6,9 +6,75 @@
 </head>
 <body>
     <nav id="navbar"></nav>
+    <section class="hero">
+        <div>
+            <h1>Doações</h1>
+            <p>Seu apoio contribui para manter viva a cultura e fortalecer as atividades do Grupo Cultural Dom Maurício.
+            </p>
+        </div>
+    </section>
 
-    <main>
-
+    <main id="doacao">
+        <p class="intro">
+            As doações representam uma forma de apoiar a continuidade das atividades desenvolvidas pelo
+            Grupo Cultural Dom Maurício. As contribuições recebidas podem auxiliar na realização de
+            apresentações, oficinas, eventos culturais, manutenção de materiais e demais ações promovidas
+            pelo grupo em benefício da comunidade. Toda contribuição é voluntária e pode colaborar para
+            que o grupo continue desenvolvendo suas atividades e alcançando mais pessoas.
+        </p>
+        <section>
+            <div class="dados-pessoais">
+                <h2>Dados Pessoais</h2>
+                <form id="formulario-dados">
+                    <div>
+                        <label for="CPF/CNPJ" id="cpf">CPF/CNPJ:
+                            <span class="required" aria-hidden="true">*</span>
+                        </label>
+                    </div>
+                    <input type="" id="cpf" placeholder="123.456.789-10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{2}"
+                        maxlength="14">
+                    <div>
+                        <label for="Nome" id="nome">Nome Completo:
+                            <span class="required" aria-hidden="true">*</span>
+                        </label>
+                    </div>
+                    <input type="text" id="nome" placeholder="Nome Completo">
+                    <div>
+                        <label for="Email" id="email">E-mail:
+                            <span class="required" aria-hidden="true">*</span>
+                        </label>
+                    </div>
+                    <input type="email" id="email" placeholder="seuemail@gmail.com">
+                    <div>
+                        <label for="Telefone" id="telefone">Telefone:
+                            <span class="required" aria-hidden="true">*</span>
+                        </label>
+                    </div>
+                    <input type="text" id="telefone" placeholder="(00)00000-0000" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"
+                        maxlength="11">
+                </form>
+            </div>
+        </section>
+        <div class="card-doacao">
+            <h2>Forma de Pagamento</h2>
+            <form id="formulario-doacao">
+                <div>
+                    <label for="valor-doacao">Valor da Doação (R$)
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+                    <input type="number" id="valor-doacao" min="0.01" step="0.01" inputmode="decimal" placeholder="Exemplo: 20,00" required>
+                </div>
+                <fieldset>
+                    <legend>Escolha uma forma de pagamento</legend>
+                    <div class="metodo-pagamento">
+                        <button class="opcao-pagamento" type="submit" formaction="doacoes-pix.html">Pix</a>
+                        <button class="opcao-pagamento" type="submit" formaction="doacoes-boleto.html">Boleto</a>
+                        <button class="opcao-pagamento" type="submit" formaction="doacoes-cartao.html">Cartão</a>
+                    </div>
+                </fieldset>
+                <p class="info">A contribuição é voluntária. Escolha a forma de pagamento para continuar.</p>
+            </form>
+        </div>
     </main>
     
     <div id="rodape"></div>
