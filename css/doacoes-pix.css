@@ -215,6 +215,12 @@ textarea:focus-visible {
     opacity: .65;
 }
 
+.tempo-expiracao { 
+    font-size: 0.95rem; 
+    color: #444; 
+    margin-top: 4px; 
+}
+
 .mensagem-status {
     min-height: 1.5em;
     color: var(--doa-verde);
