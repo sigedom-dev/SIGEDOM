@@ -44,7 +44,7 @@ function carregarNavbar(){
                 </a>
             </div>
             <div class="user-container">
-                <img class="profile" src="../assets/icons/Avatar generico.svg" alt="Meu perfil">
+                <img class="profile" src="../assets/icons/Avatar-Generico.svg" alt="Meu perfil">
                 <div class="user-info">
                     <span>Meu perfil</span>
                     <img class="seta-icon" src="../assets/icons/Seta-bandeja-perfil.svg">
@@ -65,28 +65,28 @@ function carregarRodape(){
                 
                 <div class="rodape-links">
                     <a href="https://instagram.com/grupodommauricio" target="_blank" aria-label="Instagram">
-                        <img src="../assets/icons/icon instagram.svg" alt="Instagram">
+                        <img src="../assets/icons/Icon-Instagram.svg" alt="Instagram" draggable="false">
                         <span>@grupodommauricio</span>
                     </a>
                     <a href="https://facebook.com/mauricioGC" target="_blank" aria-label="Facebook">
-                        <img src="../assets/icons/icon facebook.svg" alt="Facebook">
+                        <img src="../assets/icons/Icon-Facebook.svg" alt="Facebook" draggable="false">
                         <span>mauricioGC</span>
                     </a>
                     <a href="https://youtube.com/@grupoculturaldedommauricio3986" target="_blank" aria-label="YouTube">
-                        <img src="../assets/icons/icon youtube.svg" alt="YouTube">
+                        <img src="../assets/icons/Icon-Youtube.svg" alt="YouTube" draggable="false">
                         <span>@grupoculturaldedommauricio3986</span>
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=grupoculturaldedommauricio@gmail.com" aria-label="E-mail">
-                        <img src="../assets/icons/icon email.svg" alt="E-mail">
+                        <img src="../assets/icons/Icon-Email.svg" alt="E-mail" draggable="false">
                         <span>grupoculturaldedommauricio@gmail.com</span>
                     </a>
                 </div>
             </div>
             <div class="logo-parceiros">
-                    <img src="../assets/img/Logo Grupo Cultural.png" alt="Logo Dom Mauricio">
+                    <img src="../assets/img/Logo Grupo Cultural.png" alt="Logo Dom Mauricio" draggable="false">
                     <span>ESTE PROJETO É APOIADO PELO MINISTÉRIO DA CULTURA E PELA SECRETARIA DA CULTURA DO CEARÁ COM RECURSOS PROVENIENTES DA LEI FERDERAL N°14.399 DE JULHO DE 2022</span>
-                    <img src="../assets/img/Logo governo do estado ceará.png" alt="Logo Governo do Estado do Ceará">
-                    <img src="../assets/img/Logos cultura.png" alt="Logo PNAB, Ministério da Cultura e Governo Federal Brasil">
+                    <img src="../assets/img/Logo governo do estado ceará.png" alt="Logo governo do estado ceará.png" draggable="false">
+                    <img src="../assets/img/Logos cultura.png" alt="Logo PNAB, Ministério da Cultura e Governo Federal Brasil" draggable="false">
                 </div>
         </footer>
     `;
