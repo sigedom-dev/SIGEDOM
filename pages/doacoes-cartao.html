@@ -2,13 +2,54 @@
 <html lang="pt-BR">
 <head>
     <title>Doações - Cartão</title>
-    <script src="../components/layout.js" defer></script>
+    <link rel="stylesheet" href="doacoes.css">
+    <link rel="stylesheet" href="doacoes-cartao.css">
+    <script src="doacoes-cartao.js" defer></script>
 </head>
 <body>
+    <a class="atalho-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
     <nav id="navbar"></nav>
 
-    <main>
-
+    <main id="conteudo-principal" class="pagina-pagamento">
+        <header class="cabecalho-pagina">
+            <h1>Doação com cartão de crédito</h1>
+            <p>Contribua com as atividades do Grupo Cultural Dom Maurício utilizando seu cartão de crédito.</p>
+        </header>
+        <section class="card-pagamento" aria-labelledby="titulo-resumo">
+            <h2 id="titulo-resumo">Resumo da doação</h2>
+            <dl class="resumo-doacao">
+                <div>
+                    <dt>Beneficiário</dt>
+                    <dd>Grupo Cultural Dom Maurício</dd>
+                </div>
+                <div>
+                    <dt>Valor</dt>
+                    <dd id="valor-doacao">A definir</dd>
+                </div>
+                <div>
+                    <dt>Forma de pagamento</dt>
+                    <dd>Cartão de crédito</dd>
+                </div>
+            </dl>
+        </section>
+        <section class="card-pagamento" aria-labelledby="titulo-pagamento">
+            <h2 id="titulo-pagamento">Pagamento seguro</h2>
+            <p>Para proteger seus dados, o pagamento deverá ser concluído em um ambiente seguro do intermediador de
+                pagamento.
+            </p>
+            <div class="info-seguranca">
+                <span class="icone" aria-hidden="true">✓</span>
+                <div>
+                    <h3>Proteção dos seus dados</h3>
+                    <p>O número completo do cartão, o código de segurança e a senha não serão armazenados pelo
+                        SIGEDOM.</p>
+                </div>
+            </div>
+            <p class="aviso-pagamento">A opção de pagamento será habilitada após a integração com o provedor de
+                pagamentos.
+            </p>
+        </section>
+        <p class="voltar-doacao"><a href="doacoes.html">Voltar para as opções de doação</a></p>
     </main>
     
     <div id="rodape"></div>
