@@ -36,3 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function iniciarContador(segundosTotais) {
+    let tempo = segundosTotais;
+    const intervalo = setInterval(() => {
+        const minutos = Math.floor(tempo / 60);
+        const segundos = tempo % 60;
+        tempoRestanteEl.textContent = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+
+        if (tempo <= 0) {
+            clearInterval(intervalo);
+            mensagemStatusEl.textContent = "O código Pix expirou. Gere uma nova doação.";
+            botaoCopiarEl.disabled = true;
+        }
+        tempo--;
+    }, 1000);
+}
