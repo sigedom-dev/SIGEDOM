@@ -1,0 +1,249 @@
+:root {
+    --doa-amarelo: #ffcc00;
+    --doa-amarelo-hover: #ffad42;
+    --doa-verde: #025b2f;
+    --doa-verde-claro: #27a576;
+    --doa-marrom: #d8be99;
+    --doa-fundo: #eeeeee;
+    --doa-superficie: #ffffff;
+    --doa-texto: #171717;
+    --doa-texto-suave: #454545;
+    --doa-borda: #b8b8b8;
+    --doa-erro: #b42318;
+    --doa-foco: #1459c7;
+    --doa-raio: 16px;
+    --doa-sombra: 0 5px 18px rgb(0 0 0 / 10%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--doa-texto);
+    background: var(--doa-fundo);
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--doa-foco);
+    outline-offset: 3px;
+}
+
+.atalho-conteudo {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1000;
+    padding: 10px 14px;
+    color: #fff;
+    background: var(--doa-texto);
+    border-radius: 6px;
+    transform: translateY(-150%);
+}
+
+.atalho-conteudo:focus {
+    transform: translateY(0);
+}
+
+.pagina-pix {
+    width: min(100% - 32px, 1000px);
+    margin: 44px auto 76px;
+}
+
+.painel-pix {
+    width: min(100%, 735px);
+    margin: 0 auto;
+    padding: clamp(24px, 4vw, 42px);
+    background: var(--doa-amarelo);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.painel-pix h1 {
+    max-width: 560px;
+    margin: 0 auto 24px;
+    color: var(--doa-texto);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.valor-pix {
+    margin: 0 0 14px;
+    font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+    font-weight: 700;
+}
+
+.valor-pix strong {
+    display: block;
+}
+
+.infos-doacao {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pix-qr {
+    width: min(100%, 292px);
+    margin: 0 auto;
+    padding: 14px;
+    background: var(--doa-superficie);
+    border-radius: 12px;
+}
+
+.pix-qr img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.pix-qr img[hidden] {
+    display: none;
+}
+
+.qr-placeholder {
+    display: grid;
+    min-height: 220px;
+    place-items: center;
+    padding: 18px;
+    color: var(--doa-texto-suave);
+    border: 2px dashed var(--doa-borda);
+    border-radius: 8px;
+}
+
+.pix-qr figcaption {
+    margin-top: 10px;
+    color: var(--doa-texto-suave);
+    font-size: .9rem;
+}
+
+.texto-pix {
+    max-width: 735px;
+    margin: 24px auto;
+    color: var(--doa-texto-suave);
+    text-align: center;
+}
+
+.pix-instrucoes,
+.codigo-pix {
+    max-width: 735px;
+    margin: 24px auto;
+    padding: 20px clamp(18px, 3vw, 30px);
+    background: var(--doa-superficie);
+    border: 2px solid var(--doa-amarelo);
+    border-radius: 12px;
+}
+
+.pix-instrucoes h2,
+.codigo-pix h2 {
+    margin-top: 0;
+    color: var(--doa-verde);
+}
+
+.pix-instrucoes ol {
+    display: grid;
+    gap: 15px;
+    margin: 0;
+    padding-left: 1.7rem;
+}
+
+.pix-instrucoes li {
+    padding-left: 8px;
+    color: var(--doa-texto-suave);
+    font-size: 1.08rem;
+}
+
+.pix-instrucoes li::marker {
+    color: var(--doa-texto);
+    font-weight: 800;
+}
+
+.codigo-pix label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+.codigo-pix textarea {
+    display: block;
+    width: 100%;
+    min-height: 82px;
+    padding: 12px;
+    color: var(--doa-texto);
+    background: #f7f7f5;
+    border: 1px solid var(--doa-borda);
+    border-radius: 8px;
+    font: inherit;
+}
+
+.botao-copiar {
+    display: flex;
+    width: min(100%, 345px);
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 28px auto 0;
+    padding: 12px 22px;
+    color: var(--doa-texto);
+    background: var(--doa-amarelo);
+    border: 2px solid var(--doa-amarelo-hover);
+    border-radius: 999px;
+    box-shadow: var(--doa-sombra);
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.botao-copiar:hover:not(:disabled) {
+    background: var(--doa-amarelo-hover);
+}
+
+.botao-copiar:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+
+.mensagem-status {
+    min-height: 1.5em;
+    color: var(--doa-verde);
+    font-weight: 700;
+}
+
+.voltar-doacao {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.voltar-doacao a {
+    color: var(--doa-verde);
+    font-weight: 700;
+}
+
+footer#rodape {
+    margin-top: 48px;
+}
+
+@media (max-width: 600px) {
+    .pagina-pix {
+        width: min(100% - 22px, 560px);
+        margin-top: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
