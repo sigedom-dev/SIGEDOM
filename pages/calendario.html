@@ -3,25 +3,44 @@
 <head>
     <title>Calendário</title>
     <script src="../components/layout.js" defer></script>
+    <link rel="stylesheet" href="../css/calendario.css">
 </head>
 <body>
     <nav id="navbar"></nav>
     
-    <main>
-        <h1>Conteúdo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem velit quisquam explicabo sint laudantium doloribus veritatis laboriosam pariatur perspiciatis optio accusamus dignissimos, fuga id quod consectetur amet et temporibus modi? Lorem ipsum dolor sit amet consectetur adipisicing elit. At ex quibusdam dolor? Iste rem officiis magni, a ea quidem ullam accusamus commodi atque earum blanditiis laboriosam excepturi, in laudantium sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam ducimus itaque eligendi consequatur quidem facere maiores vel magni dolores voluptatibus delectus voluptatum beatae quisquam, animi libero quam fugiat nostrum esse!
-        Reiciendis unde vitae beatae dolores laborum veritatis ex quasi voluptatibus officia mollitia culpa velit recusandae iure, perferendis optio eveniet alias omnis animi provident tempora accusamus voluptatum explicabo non. Excepturi, neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea praesentium, neque deserunt temporibus vel esse hic ab. Doloremque, nihil tempora omnis voluptates et distinctio dolor assumenda rerum ab inventore ipsum?
-        Quo, perspiciatis. Voluptatum, aperiam. Deserunt magni error unde voluptatibus ad voluptatum provident obcaecati saepe odit rerum facere qui veniam, quas est? Sapiente earum cum aperiam blanditiis vero assumenda similique dolore!
-        Voluptates delectus magni culpa neque facere beatae. Magni optio dolore necessitatibus dolorum minima explicabo rem vel enim voluptatum reiciendis modi doloribus assumenda ipsum, voluptates aliquam nisi id ex nemo? Inventore.
-        Incidunt et expedita blanditiis minus enim quaerat maiores, amet voluptatibus commodi magni placeat repellendus labore ad omnis corrupti, sint error possimus ipsa? Dolores adipisci vero cupiditate dolorum aut eius laborum.
-        Tenetur aspernatur iste voluptatum, veritatis quae natus, tempore temporibus, placeat numquam cumque nostrum dolore itaque qui eius obcaecati ducimus repudiandae deleniti! Quam minima esse, modi similique possimus iusto pariatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquam fugit asperiores rem illo ipsam ipsum repudiandae deleniti laboriosam, excepturi fuga consectetur minima obcaecati voluptates vel saepe explicabo perspiciatis maxime!
-        Et, ullam ipsam? Excepturi cum eaque iste omnis ea, eius recusandae atque quo quibusdam placeat quis quas dicta facere impedit optio laboriosam debitis saepe nam qui doloremque voluptatem odio quae!
-        Dolorum excepturi quidem quas rerum, veritatis, recusandae quae quis hic quasi qui saepe adipisci expedita commodi voluptatem deserunt quo! Minima amet, nam suscipit harum sequi magnam ad repellendus saepe sunt.
-        Adipisci aliquam, nemo saepe quasi delectus animi esse vero, deserunt deleniti ea vel dolorem numquam voluptates quis cupiditate molestias? Eum, nulla. Inventore delectus debitis voluptate aperiam aliquam aliquid error fugiat!
-        Odio quibusdam commodi quia veniam dignissimos fugit laborum facilis impedit sint laboriosam ipsum reiciendis, id est atque nihil amet consequuntur. Odio atque nostrum laborum iusto porro incidunt officia ex et?
-        Quidem, minus illum quaerat delectus, harum quam distinctio, expedita similique provident deserunt molestias aliquid quas eveniet enim dignissimos. Cum pariatur deleniti fuga ab veritatis quibusdam eveniet quas quis adipisci magni.
-        Quo, veniam consequuntur distinctio pariatur non architecto natus aliquam perspiciatis laboriosam vel ratione excepturi quasi obcaecati nemo dolor omnis! Vero, velit quo! Quod obcaecati illo sapiente dolores at nam molestiae.</p>
-    </main>
+    <div class="banner_calendario"></div>
+
+    <section class="calendario" id="calendario">
+
+        <header class="calendario_cabecalho">
+            <button class="calendario_seta" id="mes-anterior" type="button" aria-label="Mês anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6l-6 6 6 6"/></svg>
+            </button>
+
+            <h2 class="calendario_titulo" id="titulo-mes" aria-live="polite">Outubro, 2026</h2>
+
+            <button class="calendario_seta" id="mes-seguinte" type="button" aria-label="Próximo mês">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg>
+            </button>
+        </header>
+
+        <div class="calendario_grade">
+            <div class="calendario_semana">
+                <span>DOM</span>
+                <span>SEG</span>
+                <span>TER</span>
+                <span>QUA</span>
+                <span>QUI</span>
+                <span>SEX</span>
+                <span>SÁB</span>
+            </div>
+
+            <div class="calendario_dias" id="dias"></div>
+        </div>
+
+    </section>
+
+    <script src="../components/calendario.js" defer></script>
 
     <footer id="rodape"></footer>
 </body>

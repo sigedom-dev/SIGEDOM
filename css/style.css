@@ -1,3 +1,16 @@
+:root {
+  --fundo: #eeeeee;
+  --cartao: #f9f8f4;
+  --verde: #025B2F;
+  --verde-claro: #27A576;
+  --verde-evento: #0f7a3f;
+  --amarelo: #FFCC00;
+  --borda: #d3d3cf;
+  --vazio: #e9e9e7;
+  --texto: #2b3a6b;
+  --texto-escuro: #1c2b1f;
+}
+
 * {
     box-sizing: border-box;
 }
