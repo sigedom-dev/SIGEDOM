@@ -2,13 +2,45 @@
 <html lang="pt-BR">
 <head>
     <title>Doações - Pix</title>
-    <script src="../components/layout.js" defer></script>
+    <script src="doacoes-pix.js" defer></script>
 </head>
 <body>
+    <a class="atalho-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
     <nav id="navbar"></nav>
 
-    <main>
+   <main id="conteudo-principal" class="pagina-pix">
+        <header class="painel-pix">
+            <div class="infos-doacao">
+                <h1 id="titulo-pagina">Faça sua doação aqui</h1>
+                <p class="valor-pix">Valor da doação: <strong id="valor-doacao">A definir</strong></p>
+            </div>
+            <figure class="pix-qr">
+                <div id="qr-placeholder" class="qr-placeholder">O QR Code será disponibilizado após a integração com o serviço de pagamento.</div>
+                <img id="qr-code" src="" alt="QR Code para realizar a doação ao Grupo Cultural Dom Maurício via Pix" hidden>
+                <figcaption>Quando o QR Code estiver disponível, escaneie usando o aplicativo do seu banco.</figcaption>
+            </figure>
+        </header>
 
+        <p class="texto-pix">Realize sua doação via Pix e ajude o Grupo Cultural Dom Maurício a continuar ofertando eventos à comunidade.</p>
+
+        <section class="pix-instrucoes" aria-labelledby="titulo-instrucoes">
+            <h2 id="titulo-instrucoes">Como realizar sua doação</h2>
+            <ol>
+                <li>Abra o aplicativo do seu banco e escolha a opção Pix.</li>
+                <li>Escaneie o QR Code ou copie e cole o código Pix abaixo.</li>
+                <li>Confira o destinatário e o valor antes de confirmar o pagamento.</li>
+            </ol>
+        </section>
+
+        <section class="codigo-pix" aria-labelledby="titulo-codigo">
+            <h2 id="titulo-codigo">Código Pix</h2>
+            <label for="codigo-pix">Código para copiar</label>
+            <textarea id="codigo-pix" rows="3" readonly placeholder="O código Pix será disponibilizado após a integração."></textarea>
+            <button class="botao-copiar" type="button" id="copiar-cod" disabled>Copiar código Pix</button>
+            <p id="mensagem-pix" class="mensagem-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <p class="voltar-doacao"><a href="doacoes.html">Voltar para as opções de doação</a></p>
     </main>
     
     <div id="rodape"></div>
